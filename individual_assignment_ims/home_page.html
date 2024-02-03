@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>INDIVIDUAL ASSIGNMENT (UiTM)</title>
+</head>
+
+<body style="background-color: aquamarine;">
+
+<header>
+	
+<h1 style="color: white; background-color: mediumseagreen; text-align: center;">Welcome to My Website</h1>
+</header>
+
+<style>
+ {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 3%;
+  font-family: Tahoma;
+}
+
+.tablink {
+  background-color: mintcream;
+  color: black;
+  float: left;
+  border: solid;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 20px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: mintcream;
+}
+
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#home_page.html {background-color: skyblue;}
+#biodata.html {background-color: greenyellow;}
+#experience.html {background-color: darkred;}
+#education.html {background-color: lightyellow;}
+#family.html {background-color: blueviolet;}
+#gallery.html {background-color: turquoise;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('home_page.html', this, 'skyblue')">HOME</button>
+<button class="tablink" onclick="openPage('biodata.html', this, 'greenyellow')" id="defaultOpen">BIODATA</button>
+<button class="tablink" onclick="openPage('experience.html', this, 'darkred')">EXPERIENCE</button>
+<button class="tablink" onclick="openPage('education.html', this, 'lightyellow')">EDUCATION</button>
+<button class="tablink" onclick="openPage('family.html', this, 'blueviolet')">FAMILY</button>
+<button class="tablink" onclick="openPage('gallery.html', this, 'turquoise')">GALLERY</button>
+
+
+<div id="home_page.html" class="tabcontent">
+  <h3>HOME</h3>
+  <p> Hello, my name is Muhammad Ilmam Syuhaidy Bin Othman. on this website, I would like to introduce myself to oter audience. Let's explore!
+
+<img src="C:/Users/USER/Documents/BA250 SEM 3/4. IMS456/individual_assignment_ims/image/awesome.jpg" alt="shocked">
+
+  </p>
+</div>
+
+<div id="biodata.html" class="tabcontent">
+  <h3>BIODATA</h3>
+  <p>Welcome to my biodata's page. These are my details.
+
+
+
+  </p> 
+</div>
+
+<div id="experience.html" class="tabcontent">
+  <h3>EXPERIENCE</h3>
+  <p>Welcome to my experience's page, where I gain my other experiences.</p>
+</div>
+
+<div id="education.html" class="tabcontent">
+  <h3>EDUCATION</h3>
+  <p>Welcome to my education's page. This is my alma mater.</p>
+</div>
+
+<div id="family.html" class="tabcontent">
+  <h3>FAMILY</h3>
+  <p>Welcome to my family's page. This page contains about my family!</p>
+</div>
+
+<div id="gallery.html" class="tabcontent">
+  <h3>GALLERY</h3>
+  <p>Welcome to my gallery's page. This page presents all of pictures which is really important to me!</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
